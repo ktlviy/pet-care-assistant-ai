@@ -66,7 +66,6 @@ npm install
 ### 2. Set Up Environment
 
 DATABASE_URL=""
-<<<<<<< HEAD
 
 NEXTAUTH_SECRET=""
 
@@ -75,14 +74,6 @@ OPENAI_API_KEY=""
 CLOUDINARY_CLOUD_NAME=""
 
 CLOUDINARY_API_KEY=""
-
-=======
-NEXTAUTH_SECRET=""
-OPENAI_API_KEY=""
-CLOUDINARY_CLOUD_NAME=""
-CLOUDINARY_API_KEY=""
->>>>>>> 8c9e251 (Initial commit)
-CLOUDINARY_API_SECRET=""
 
 ### 3. Database
 
