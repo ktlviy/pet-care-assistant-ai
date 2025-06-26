@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id             String   @id @default(cuid())
+  email          String   @unique
+  password       String
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  treatmentPlans TreatmentPlan[]
+}
+
+model VerificationToken {
+  identifier String
+  token      String @unique
+  expires    DateTime
+}
+
+model TreatmentPlan {
+  id        String   @id @default(cuid())
+  petType   String
+  color     String
+  species   String
+  age       String
+  plan      String  
+  photoUrl  String @default("")
+  createdAt DateTime @default(now())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+}
